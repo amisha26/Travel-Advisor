@@ -18,7 +18,18 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked, weatherDat
       >
         
           >
-            
+            {!matches
+              ? <LocationOnOutlinedIcon color="primary" fontSize="large" />
+              : (
+                <Paper elevation={3} className={classes.paper}>
+                  <Typography className={classes.typography} variant="subtitle2" gutterBottom> {place.name}</Typography>
+                  <img
+                    className={classes.pointer}
+                    src={place.photo ? place.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'}
+                  />
+                  <Rating name="read-only" size="small" value={Number(place.rating)} readOnly />
+                </Paper>
+              )}
           </div>
         ))}
         {weatherData?.list?.length && weatherData.list.map((data, i) => (
