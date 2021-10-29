@@ -3,7 +3,11 @@ import { CssBaseline, Grid } from '@material-ui/core';
 
 const App = () => {
   
- 
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
+      setCoords({ lat: latitude, lng: longitude });
+    });
+  }, []);
 
   useEffect(() => {
     const filtered = places.filter((place) => Number(place.rating) > rating);
