@@ -16,7 +16,12 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked, weatherDat
       <GoogleMapReact
        
       >
-        
+        {places.length && places.map((place, i) => (
+          <div
+            className={classes.markerContainer}
+            lat={Number(place.latitude)}
+            lng={Number(place.longitude)}
+            key={i}
           >
             {!matches
               ? <LocationOnOutlinedIcon color="primary" fontSize="large" />
