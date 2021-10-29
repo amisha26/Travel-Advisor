@@ -1,6 +1,6 @@
 ## Travel Advisor
 
-![Travel Advisor]() 
+![Travel Advisor](https://github.com/amisha26/Travel-Advisor/blob/master/public/tra.png) 
 
 ## Introduction
 Build and Deploy an advanced Travel Companion Application using Google Maps. With Geolocation, Google Maps API, Searching for places, Fetching restaurants, hotels and attractions based on location from specialized Rapid APIs, data filtering and much more.
